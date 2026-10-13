@@ -1,0 +1,48 @@
+Bullshit 
+    Best for 4 to 10 players. A classic card game where players discard cards face-down in 
+    ascending numerical order, openly lying about what they are playing. If someone calls "Bullshit!" 
+    and catches a liar, the liar drinks and picks up the deck; if the accuser is wrong, they
+    drink instead.
+
+
+fuck the dealer 
+    Best for 4 to 8 players. One player acts as the dealer. Moving around the circle, players guess 
+    the value of the dealer's hidden card. If they guess wrong twice, they drink the difference; if 
+    they guess right, the dealer drinks heavily.
+
+
+ride the bus 
+    Great for small-to-medium groups. It features multiple phases where players guess attributes of cards 
+    (e.g., Red or Black? Higher or Lower?) before a final, high-stakes "bus ride" elimination round.
+
+
+quaters 
+    Best for 3 to 6 players. Players take turns trying to bounce a physical coin (traditionally a quarter) 
+    off the table and directly into a shot glass or a chalice cup filled with a drink in the center.
+
+drunk jenga 
+     Write dares, rules, or drink commands on the side of Jenga blocks before building the tower. Whenever 
+     a player pulls a block out, they must perform the written action. If the tower falls over, that player 
+     has to chug.
+
+
+tower roulette 
+    An original twist on Drunk Jenga using a standard block tower. Before starting, pull 5 random blocks and 
+    paint their ends red. When a player successfully pulls a red block, they become the "Dictator" and can hand 
+    out drinks or invent a temporary house rule. If they crash the tower while pulling a red block, they have to 
+    finish two full drinks.
+
+
+medusa 
+     Best for 5 to 10 players. Everyone starts with their heads down on the table. On the count of three, everyone 
+     looks up and stares directly at another player. If you are looking at someone who is not looking at you, you 
+     are safe. If you make direct eye contact with someone looking back at you, both players must yell "Medusa!" 
+     and the person that says it last must finish a drink.
+
+
+name game 
+    Best for 3 to 8 players. Ideal for developer groups. The first player says a tech, gaming, or pop-culture entity 
+    (e.g., "JavaScript"). The next player must say an entity that starts with the last letter of the previous 
+    word (e.g., "Tomcat"). If a player says an acronym (e.g., "AWS"), the direction of the circle reverses. 
+    Pausing for more than 3 seconds or repeating a word requires a drink.
+

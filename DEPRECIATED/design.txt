@@ -1,0 +1,5 @@
+Plan for the code
+
+it randomly chooses a drinking game then depending on what one it chooses you can then select which whether you need select
+whether you need the rules for the game or not if you dont need them then we will turn it into html code on the rasberry pie
+so that we can run it as a website properly.

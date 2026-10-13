@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Private credentials
+*.pem
+*.key
+*.p12
+
+# Editor Settings
+.idea/
+.vscode/
