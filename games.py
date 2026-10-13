@@ -129,3 +129,5 @@ GAMES = [
     BULLSHIT,
     QUATERS
 ]
+
+#james is gay
