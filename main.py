@@ -12,6 +12,8 @@ cards = None # Do they have cards
 solo_cups = None # Do they have solo cups
 jenga_blocks = None # Do they have jenga blocks
 
+names = []
+
 # Print out the logo when called
 def logo():
     print("")
@@ -97,6 +99,17 @@ def format_options():
     
     handle_games(players)
 
+def get_names():
+    global names
+
+    for i in range(players):
+        name = input(f"Enter Player {i + 1}: ")
+        names.append(name) 
+
+    print(names)  
+
+    format_options()
+
 def menu():
     global players, cards, solo_cups, jenga_blocks
     logo()
@@ -106,6 +119,6 @@ def menu():
     solo_cups = input("Do you have any solo cups and a ping pong ball? Y / N\n> ").lower().replace(" ", "")
     jenga_blocks = input("Do you have jenga blocks? Y / N\n> ").lower().replace(" ", "")
 
-    format_options()
+    get_names()
 
 menu()
