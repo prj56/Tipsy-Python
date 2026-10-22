@@ -1,5 +1,8 @@
 import random
 
+# Handlers Imports
+from handlers.rof_handler import rof_handler
+
 from games import GAMES
 
 # Global Variables
@@ -41,8 +44,22 @@ def handle_games(players):
 
     # Afterwards here will direct to each game's handler
 
-    for game in available_games:
-        print(game["name"])
+    selected_game = random.choice(available_games)
+
+    assign_games(selected_game['name'])
+
+game_handlers = {
+    "Ring of fire": rof_handler
+}
+
+def assign_games(game):
+    handler = game_handlers.get(game)
+
+    if handler is None:
+        print("Not working")
+
+    handler()
+
 
 # Format cards and solo_cups
 def format_options():
