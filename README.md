@@ -23,7 +23,7 @@ what equiptment they have and available equiptment. The program will automatical
 collection of games and display compatible options with their rules
 
 Authors: prj56 & cooperchalmers200925-dev
-Version: v0.01
+Version: v0.02
 
 # Features
 
