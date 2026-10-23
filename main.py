@@ -44,8 +44,6 @@ def handle_games(players):
         and (not game["solo_cups"] or solo_cups)
     ]
 
-    # Afterwards here will direct to each game's handler
-
     selected_game = random.choice(available_games)
 
     assign_games(selected_game['name'])
@@ -60,65 +58,70 @@ def assign_games(game):
     if handler is None:
         print("Not working")
 
-    handler()
-
-
-# Format cards and solo_cups
-def format_options():
-    global cards, solo_cups, jenga_blocks
-
-    if cards == "yes" or cards == "y":
-        cards = True
-
-    elif cards == "no" or cards == "n":
-        cards = False
-    else:
-        print("Please enter either Y or N.\n")
-        menu()
-
-    if solo_cups == "yes" or solo_cups == "y":
-        solo_cups = True
-
-    elif solo_cups == "no" or solo_cups == "n":
-        solo_cups = False
-
-    else:
-        print("Please enter either Y or N.\n")
-        menu()
-
-    if jenga_blocks == "yes" or jenga_blocks == "y":
-        jenga_blocks = True
-
-    elif jenga_blocks == "no" or jenga_blocks == "n":
-        jenga_blocks = False
-
-    else:
-        print("please enter either Y or N\n"),
-        menu()   
-    
-    
-    handle_games(players)
+    handler(names)
 
 def get_names():
     global names
 
+    names.clear()
+
     for i in range(players):
-        name = input(f"Enter Player {i + 1}: ")
-        names.append(name) 
+        while True:
+            name = input(f"Enter Player {i + 1}: ").strip()
 
-    print(names)  
+            if name:
+                names.append(name)
+                break
 
-    format_options()
+            print("Please enter a valid name.")
+
+def validate_input(question):
+    while True:
+        answer = input(question).strip().replace(" ", "")
+
+        if answer in ("y" or "yes"):
+            return True
+        
+        elif answer in ("n", "no"):
+            return False
+        
+        else:
+            print("Please enter either Y or N.\n")
+
+def get_players():
+    while True:
+        try:
+            count = int(input("How many players are there?\n> "))
+            
+            if count < 1:
+                print("Please enter at least one player.\n")
+                continue
+
+            return count
+        
+        except ValueError:
+            print("Please enter a valid number.\n")
 
 def menu():
     global players, cards, solo_cups, jenga_blocks
+
     logo()
     
-    players = int(input("How many players are there?\n> "))
-    cards = input("Do you have a deck of cards? Y / N\n> ").lower().replace(" ", "")
-    solo_cups = input("Do you have any solo cups and a ping pong ball? Y / N\n> ").lower().replace(" ", "")
-    jenga_blocks = input("Do you have jenga blocks? Y / N\n> ").lower().replace(" ", "")
+    players = get_players()
+
+    cards = validate_input(
+        "Do you have a deck of cards? Y/N\n> "
+    )
+
+    solo_cups = validate_input(
+        "Do you have solo cups and ping pong ball? Y/N\n> "
+    )
+
+    jenga_blocks = validate_input(
+        "Do you have any jenga blocks? Y/N\n> "
+    )
 
     get_names()
+    handle_games(players)
 
 menu()
