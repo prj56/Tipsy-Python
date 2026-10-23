@@ -64,7 +64,7 @@ And your done!
 # Project Structure
 ```
 Tipsy-Python/
-├── DEPRECIATED        # Files that are to be deleted in future released
+├── DEPRECIATED        # Files that are to be deleted in future releases
 ├── handlers           # Where the game's handlers are stored
 │   └── rof_handler.py # Ring of fire's current handler
 ├── main.py            # User input and game filtering
