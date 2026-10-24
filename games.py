@@ -9,67 +9,67 @@ RING_OF_FIRE = {
         "rules": "Each person has a cup or bottle of their preffered drink, one person at a time, clockwise picks a card.",
         "card_value": [
             {
-                "card": "Ace",
+                "card": "a",
                 "action": "Waterfall, Everyone drinks clockwise from the person who drew the card until the person who\ndrew the card decides to stop."
             },
 
             {
-                "card": "Two",
+                "card": "2",
                 "action": "Choose, The person who drew the card gets to choose the person that drinks."
             },
 
             {
-                "card": "Three",
+                "card": "3",
                 "action": "Me, The person who drew the card drinks."
             },
 
             {
-                "card": "Four",
+                "card": "4",
                 "action": "Whore, All girls have to drink."
             },
 
             {
-                "card": "Five",
+                "card": "5",
                 "action": "Thumb Master, You can put your thumb on the table and everyone must follow however the last person to do so\nmust drink and this continues until another person draws a five."
             },
 
             {
-                "card": "Six",
+                "card": "6",
                 "action": "Dicks, All guys Drink."
             },
 
             {
-                "card": "Seven",
+                "card": "7",
                 "action": "Heaven, Randomly point your finger to the sky, last to do so drinks."
             },
 
             {
-                "card": "Eight",
+                "card": "8",
                 "action": "Mate, Choose someone to drink same time as you for the rest of the game."
             },
 
             {
-                "card": "Nine",
+                "card": "9",
                 "action": "Rhyme, Choose a word then clockwise everyone has to rhyme until someone cant, they drink."
             },
 
             {
-                "card": "Ten",
+                "card": "10",
                 "action": "Category, Pick a category and everyone has to say a word in that category until someone cant\nthey drink."
             },
 
             {
-                "card": "Jack",
+                "card": "j",
                 "action": "Rule, Make a rule everyone has to follow e.g. you have to drink stood on your left foot."
             },
 
             {
-                "card": "Queen",
+                "card": "q",
                 "action": "Questions, Go in a cricle asking questions, first to not ask one drinks."
             },
 
             {
-                "card": "King",
+                "card": "k",
                 "action": "Pour, pour a little of your drink into the cup in the middle and whoever picks the last king\ndrinks the middle cup."
             }
             ]
@@ -110,8 +110,8 @@ BULLSHIT = {
 
 }
 
-QUATERS = {
-    "name": "Quaters",
+QUARTERS = {
+    "name": "Quarters",
     "min_players": 3,
     "max_players": 6,
     "cards": False,
@@ -127,5 +127,5 @@ GAMES = [
     BEER_PONG,
     JENGA,
     BULLSHIT,
-    QUATERS
+    QUARTERS
 ]

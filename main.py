@@ -77,7 +77,7 @@ def get_names():
 
 def validate_input(question):
     while True:
-        answer = input(question).strip().replace(" ", "")
+        answer = input(question).lower().replace(" ", "")
 
         if answer in ("y" or "yes"):
             return True
