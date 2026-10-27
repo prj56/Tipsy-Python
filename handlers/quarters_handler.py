@@ -23,7 +23,7 @@ def quarters_handler(players):
         print("No players found.")
         return
     
-    a = input("Would you like to view the rules and setup?\n> ").lower().replace(" ", "")
+    a = input("Would you like to view the rules and setup? Y/N\n> ").lower().replace(" ", "")
 
     if a == "y":
         print("RULES:\n", rules)
