@@ -64,10 +64,14 @@ And your done!
 # Project Structure
 ```
 Tipsy-Python/
-├── DEPRECIATED        # Files that are to be deleted in future releases
-├── handlers           # Where the game's handlers are stored
-│   └── rof_handler.py # Ring of fire's current handler
-├── main.py            # User input and game filtering
-├── games.py           # Game definitions and requirements
-└── README.md          # Project documentation
+├── DEPRECIATED               # Files that are to be deleted in future releases
+├── handlers                  # Where the game's handlers are stored
+│   └── bullshit_handler.py   # Bullshit's current Handler
+│   └── jenga_handler.py      # Jenga's current Handler
+│   └── pong_handler.py       # Beer Pong's current Handler
+│   └── quarters_handler.py   # Quarters' current Handler
+│   └── rof_handler.py        # Ring of fire's current handler
+├── main.py                   # User input and game filtering
+├── games.py                  # Game definitions and requirements
+└── README.md                 # Project documentation
 ```
