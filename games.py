@@ -100,13 +100,13 @@ JENGA = {
 
 BULLSHIT = {
     "name": "Bullshit",
-    "min_players": "4",
-    "max_players": "8",
+    "min_players": 4,
+    "max_players": 8,
     "cards": True,
     "solo_cups": False,
     "jenga_blocks": False,
     "setup": "Deal out all the cards to the players.",
-    "rules": "players take turns placing cards face down claiming their value e.g. i placed a 3, the next person then needs\nto place their card and it needs to be higher than the opriginal claimed value however you can lie about your\ncards value but if someone says bullshit then the person reveals their card and if this card was what they claimed\nthen the accusser drinks but if its not then the accussed drinks.",
+    "rules": "Players take turns placing cards face down claiming their value e.g. i placed a 3, the next person then needs\nto place their card and it needs to be higher than the original claimed value however you can lie about your\ncards value but if someone says bullshit then the person reveals their card and if this card was what they claimed\nthen the accusser drinks but if its not then the accussed drinks.",
 
 }
 

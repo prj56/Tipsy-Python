@@ -2,6 +2,10 @@ import random
 
 # Handlers Imports
 from handlers.rof_handler import rof_handler
+from handlers.pong_handler import pong_handler
+from handlers.jenga_handler import jenga_handler
+from handlers.bullshit_handler import bullshit_handler
+from handlers.quarters_handler import quarters_handler
 
 from games import GAMES
 
@@ -49,14 +53,20 @@ def handle_games(players):
     assign_games(selected_game['name'])
 
 game_handlers = {
-    "Ring of fire": rof_handler
+    "Ring of fire": rof_handler,
+    "Beer Pong": pong_handler,
+    "Jenga": jenga_handler,
+    "Bullshit": bullshit_handler,
+    "Quarters": quarters_handler
 }
 
 def assign_games(game):
     handler = game_handlers.get(game)
 
     if handler is None:
-        print("Not working")
+        print(f"Error: No handler found for '{game}'.")
+        print("Available games:", ", ".join(game_handlers.keys()))
+        return
 
     handler(names)
 
@@ -79,19 +89,19 @@ def validate_input(question):
     while True:
         answer = input(question).lower().replace(" ", "")
 
-        if answer in ("y" or "yes"):
+        if answer in ("y", "yes"):
             return True
         
         elif answer in ("n", "no"):
             return False
-        
+
         else:
             print("Please enter either Y or N.\n")
 
 def get_players():
     while True:
         try:
-            count = int(input("How many players are there?\n> "))
+            count = int(input("\nHow many players are there?\n> "))
             
             if count < 1:
                 print("Please enter at least one player.\n")
@@ -107,21 +117,45 @@ def menu():
 
     logo()
     
-    players = get_players()
+    print("1. Play a game")
+    print("Q. Quit")
 
-    cards = validate_input(
-        "Do you have a deck of cards? Y/N\n> "
-    )
+    choice = input("\nSelect an option:\n> ").lower().replace(" ", "")
 
-    solo_cups = validate_input(
-        "Do you have solo cups and ping pong ball? Y/N\n> "
-    )
+    if choice == "q":
+        print("Thanks for playing.")
+        return False
+    
+    elif choice == "1":
+        players = get_players()
 
-    jenga_blocks = validate_input(
-        "Do you have any jenga blocks? Y/N\n> "
-    )
+        cards = validate_input(
+            "Do you have a deck of cards? Y/N\n> "
+        )
 
-    get_names()
-    handle_games(players)
+        solo_cups = validate_input(
+            "Do you have solo cups and ping pong ball? Y/N\n> "
+        )
 
-menu()
+        jenga_blocks = validate_input(
+            "Do you have any jenga blocks? Y/N\n> "
+        )
+
+        get_names()
+        handle_games(players)
+
+        return True
+    
+    else:
+        print("Invalid option.")
+        return True
+
+def main():
+    while True:
+        keep_running = menu()
+
+        if keep_running is False:
+            break
+
+if __name__ == "__main__":
+    main()

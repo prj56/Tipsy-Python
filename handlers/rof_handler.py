@@ -45,8 +45,8 @@ def rof_playing(players, card_rules):
         card = input("\nEnter your card (or QUIT to quit)\n> ").strip().lower()
 
         if card == "quit":
-            print("Game ended!")
-            break
+            print("Game ended! Returning to main menu")
+            return
 
         for item in card_rules:
             if item["card"] == card:
